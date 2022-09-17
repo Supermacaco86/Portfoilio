@@ -21,6 +21,44 @@ Redux, SQL entre otras tecnologías del sector. Realicé dos App de manera indiv
             </div>
         </div>
     </header>
+
+    {/**Segunda seccion */}
+    <div className="row py-4">
+        <div className="col-md-4">
+            <div className="card bg-ligth">
+                <div className="card body">
+                    <h1>Habilidades</h1>
+                        <h5>Javascript</h5>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width:'80%'}}></div>
+                        </div>
+                        <h5>React</h5>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width:'80%'}}></div>
+                        </div>
+                        <h5>Redux</h5>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width:'80%'}}></div>
+                        </div>
+                        <h5>Express</h5>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width:'80%'}}></div>
+                        </div>
+                        <h5>Sequelize</h5>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width:'80%'}}></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-md-8">
+            <div className="card bg-ligth">
+                <div className="card body">
+                    <h1>Experiencia</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>
 
 )
