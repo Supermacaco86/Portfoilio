@@ -1,5 +1,5 @@
 import Layout from "../component/Layout"
-import { habilidades, experiencias } from "../profile"
+import { habilidades, experiencias, proyectos } from "../profile"
 
 const index = () => (
 <Layout>
@@ -74,6 +74,35 @@ Redux, SQL entre otras tecnologías del sector. Realicé dos App de manera indiv
         </div>
     </div>
     {/**Portfolio */}
+    <div className="row">
+        <div className="col-md-12">
+            <div className="card card-body bg-dark">
+                <div className="row">
+                    <div className="col-md-12">
+                        <h1 className="text-center text-light">Proyectos</h1>
+                    </div>
+                    {
+                            proyectos.map(({titulo, donde, descripcion, url, imagen, fecha},i)=>(
+                                <div className="col-md-4 p-2" key={i}>
+                                    <div className="card h-100">
+                                        <div className="overflow">
+                                            <img src={`/${imagen}`} alt="" className="card-img-top"/>
+                                            </div>
+                                            <div className="card-body">
+                                                <h5>{titulo}</h5> 
+                                                <h6>{donde}</h6>
+                                                <h6>{fecha}</h6>
+                                                <p>{descripcion}</p>
+                                                <h6>{url}</h6>
+                                            </div>
+                                        </div>    
+                                    </div>
+                            ))
+                        }
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>
 
 )
