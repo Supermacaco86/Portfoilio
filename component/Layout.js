@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footer = true }) => {
 
 const router = useRouter();
 
@@ -13,12 +13,11 @@ const router = useRouter();
        console.log(url)
        NProgress.start();
       }
-    router.events.on('routerChangeStart', handleRouteChange)
-    router.events.on('hashChangeComplete',()=> NProgress.done())
+    router.events.on('routeChangeStart', handleRouteChange)
+    router.events.on('routeChangeComplete',()=> NProgress.done())
     return()=>{
       router.events.off('routeChangeStart', handleRouteChange)
     }
-
   },[])
 
 return(
@@ -27,12 +26,15 @@ return(
     <main className="container py-4">
         {children}
     </main>
-    <footer className="bg-dark text-light text-center">
-      <div className="container p-4">
-        <h1>&copy; Martin Figueroa Portfolio</h1>
-        <p>2022 - {new Date().getFullYear()}</p>
-      </div>
-    </footer>
+   {
+   footer &&( <footer className="bg-dark text-light text-center">
+        <div className="container p-4">
+            <h1>&copy; Martin Figueroa Portfolio</h1>
+            <p>2022 - {new Date().getFullYear()}</p>
+          </div>
+        </footer>
+      )
+    }
   </>
 );
 }
