@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
 
-const Layout = ({ children, footer = true }) => {
+const Layout = ({ children, footer = true, dark = false }) => {
 
 const router = useRouter();
 
@@ -21,7 +21,7 @@ const router = useRouter();
   },[])
 
 return(
-  <>
+  <div className={dark? 'bg-dark':''}>
     <NavBar />
     <main className="container py-4">
         {children}
@@ -35,7 +35,7 @@ return(
         </footer>
       )
     }
-  </>
+  </div>
 );
 }
 export default Layout;

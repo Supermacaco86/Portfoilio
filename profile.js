@@ -67,3 +67,42 @@ export const proyectos = [
     }
 
 ]
+
+export const posts = [
+    {
+        title:"Javascript",
+        content:"Descripcion",
+        imageURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+        docu:"https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+        title:"React",
+        content:"Descripcion",
+        imageURL:"https://reactjs.org/logo-og.png",
+        docu:"https://es.reactjs.org/docs/getting-started.html"
+    },
+    {
+        title:"Redux",
+        content:"Descripcion",
+        imageURL:"https://cdn.worldvectorlogo.com/logos/redux.svg",
+        docu:"https://es.redux.js.org/"
+    },
+    {
+        title:"Express",
+        content:"Descripcion",
+        imageURL:"https://fd-development.com/images/expressjs.png",
+        docu:"https://expressjs.com/es/"
+    },
+    {
+        title:"Sequelize",
+        content:"Descripcion",
+        imageURL:"https://google.github.io/sqlcommenter/images/sequelize-logo.png",
+        docu:"https://sequelize.org/"
+    },
+    {
+        title:"PostgreSQL",
+        content:"Descripcion",
+        imageURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png",
+        docu:"https://www.postgresql.org/docs/"
+    }
+]
