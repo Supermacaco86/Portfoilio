@@ -11,10 +11,8 @@ const PostCard = ({ post }) => (
       <div className="card-body">
         <h1>{post.title}</h1>
         <p>{post.content}</p>
-        <Link href={post.docu}>
-          <button className="btn btn-light">Documentacion</button>
-        </Link>
-      </div>
+        <a href={post.docu} target="_blank" className="btn btn-outline-secondary">Documentacion</a>
+       </div>
     </div>
   </div>
 );
