@@ -16,7 +16,7 @@ const index = () => (
                         <p>Full Stack Developer con formación como Diseñador Web. Experiencia trabajando en NodeJS, React,
 Redux, SQL entre otras tecnologías del sector. Realicé dos App de manera individual y una App, cuya temática es la salud, de manera grupal. Con pensamiento creativo, resolución de problemas, trabajo en equipo, comunicación y autonomía.
 </p>
-                        <a href="/contratane">Contratame</a>
+                        <a href="https://www.linkedin.com/in/martin--figueroa/ " target="_blank" className="btn btn-secondary">Contratame</a>
                     </div>
                 </div>
             </div>
