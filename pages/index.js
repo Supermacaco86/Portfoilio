@@ -1,8 +1,12 @@
 import Layout from "../component/Layout"
 import { habilidades, experiencias, proyectos } from "../profile"
+import LeguajeSelector from "../component/LenguajeSelector";
 
 
-const index = () => (
+export default function index (props) {
+     const {title}= props;
+    return(
+   
 <Layout>
 {/**Header card */}
     <header className="row">
@@ -14,9 +18,7 @@ const index = () => (
                     </div>
                     <div className="col-md-8">
                         <h1>Martin Figueroa</h1>
-                        <p>Full Stack Developer con formación como Diseñador Web. Experiencia trabajando en NodeJS, React,
-Redux, SQL entre otras tecnologías del sector. Realicé dos App de manera individual y una App, cuya temática es la salud, de manera grupal. Con pensamiento creativo, resolución de problemas, trabajo en equipo, comunicación y autonomía.
-</p>
+                        <p>{title.descripcion}</p>
                         <a href="https://www.linkedin.com/in/martin--figueroa/ " target="_blank" className="btn btn-secondary">Contratame</a>
                     </div>
                 </div>
@@ -107,5 +109,12 @@ Redux, SQL entre otras tecnologías del sector. Realicé dos App de manera indiv
 </Layout>
 
 )
+ }
 
-export default index
+ export async function getStaticProps ({ locale }){
+    console.log(locale)
+    const response = await import(`../.next/lang/${locale}.json`);
+    return{
+        props: { title:response.default.title}
+    };
+}
