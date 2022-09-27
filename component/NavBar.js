@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LeguajeSelector from './LenguajeSelector'
 
 const NavBar = () => (
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -11,6 +12,7 @@ const NavBar = () => (
   </button> 
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
+    <LeguajeSelector />
       <li className="nav-item">
         <Link href="/blog">
             <a className="nav-link">Tecnologias</a>

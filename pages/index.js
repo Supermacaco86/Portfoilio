@@ -1,6 +1,7 @@
 import Layout from "../component/Layout"
 import { habilidades, experiencias, proyectos } from "../profile"
 
+
 const index = () => (
 <Layout>
 {/**Header card */}
