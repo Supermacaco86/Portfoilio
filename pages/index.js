@@ -82,7 +82,7 @@ export default function index (props) {
             <div className="card card-body bg-dark">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 className="text-center text-light">Proyectos</h1>
+                        <h1 className="text-center text-light">{title.proyecto}</h1>
                     </div>
                     {
                             proyectos.map(({titulo, donde, descripcion, url, imagen, fecha},i)=>(
