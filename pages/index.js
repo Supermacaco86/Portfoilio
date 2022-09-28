@@ -4,7 +4,7 @@ import LeguajeSelector from "../component/LenguajeSelector";
 
 
 export default function index (props) {
-     const {title}= props;
+      const {title}= props;
     return(
    
 <Layout>
@@ -113,7 +113,7 @@ export default function index (props) {
 
  export async function getStaticProps ({ locale }){
     console.log(locale)
-    const response = await import(`../.next/lang/${locale}.json`);
+    const response = await import(`../lang/${locale}.json`);
     return{
         props: { title:response.default.title}
     };
