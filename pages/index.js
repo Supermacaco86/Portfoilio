@@ -19,7 +19,7 @@ export default function index (props) {
                     <div className="col-md-8">
                         <h1>Martin Figueroa</h1>
                         <p>{title.descripcion}</p>
-                        <a href="https://www.linkedin.com/in/martin--figueroa/ " target="_blank" className="btn btn-secondary">Contratame</a>
+                        <a href="https://www.linkedin.com/in/martin--figueroa/ " target="_blank" className="btn btn-secondary">{title.contratame}</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@ export default function index (props) {
         <div className="col-md-4">
             <div className="card bg-ligth">
                 <div className="card body">
-                    <h1>Habilidades</h1>
+                    <h1>{title.habilidades}</h1>
                        {
                         habilidades.map(({habilidades,percentage},i)=>(
                                 <div className="py-2" key={i}>
@@ -57,7 +57,7 @@ export default function index (props) {
         <div className="col-md-8">
             <div className="card bg-ligth">
                 <div className="card body">
-                    <h1>Experiencia</h1>
+                    <h1>{title.experiencia}</h1>
                     <ul>
                         {
                             experiencias.map(({titulo, donde, descripcion, url, fecha},i)=>(
